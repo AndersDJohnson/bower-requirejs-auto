@@ -1,7 +1,7 @@
 bower-requirejs-auto
 ====================
 
-Automatically configures RequireJS paths for Bower components in the browser at runtime. Just get started with Bower and RequireJS as fast as possible!
+Automatically configures RequireJS paths for Bower components in the browser at runtime. Just get started as fast as possible with Bower and RequireJS!
 
 Recommended for development use only.
 
