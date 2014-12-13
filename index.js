@@ -32,13 +32,13 @@
       var then = script.attributes['data-then'];
       if (then) {
         var thenVal = then.value;
-        opts.mains.push(val);
+        opts.mains.push(thenVal);
       }
 
       var base = script.attributes['data-base'];
       if (base) {
         var baseVal = base.value;
-        opts.base = val;
+        opts.base = baseVal;
       }
 
     }
