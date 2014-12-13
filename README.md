@@ -5,7 +5,7 @@ Automatically configures RequireJS paths for Bower components in the browser at 
 
 Recommended for development use only.
 
-Simpler than hard-coding all your Bower component paths into HTML, and faster than tools like  [yeoman/bower-requirejs](https://github.com/yeoman/bower-requirejs) (or [yeoman/grunt-bower-requirejs](https://github.com/yeoman/grunt-bower-requirejs)) which require their own configuration.
+Simpler than hard-coding all your Bower component paths into HTML, and faster than tools like  [yeoman/bower-requirejs](https://github.com/yeoman/bower-requirejs) (or [yeoman/grunt-bower-requirejs](https://github.com/yeoman/grunt-bower-requirejs)) which require their own configuration and repeated execution.
 
 ## Install
 
