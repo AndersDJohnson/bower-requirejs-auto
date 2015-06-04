@@ -140,6 +140,10 @@
       for (var i = 0, m = mainItems.length; i < m; ++i) {
         mainItem = mainItems[i];
 
+        if (! mainItem.match(/\.js$/)) {
+          continue;
+        }
+
         mainItem = mainItem.replace(/\.js$/, '');
 
         var path = dir + '/' + mainItem;
