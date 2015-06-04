@@ -2,7 +2,8 @@
 
   var opts = {
     mains: [],
-    base: ''
+    base: '',
+    bowerPath: 'bower_components'
   };
 
   var basedUrl = function (path) {
@@ -39,6 +40,12 @@
       if (base) {
         var baseVal = base.value;
         opts.base = baseVal;
+      }
+
+      var bowerPath = script.attributes['data-bower-path'];
+      if (bowerPath) {
+        var bowerPathVal = bowerPath.value;
+        opts.bowerPath = bowerPathVal;
       }
 
     }
@@ -117,7 +124,7 @@
   };
 
   var eachDep = function (dep, depName, callback) {
-    var dir = basedUrl('bower_components/' + depName);
+    var dir = basedUrl(opts.bowerPath + '/' + depName);
     get(dir + '/.bower.json', function (xhr) {
       var config = JSON.parse(xhr.responseText);
 
@@ -132,6 +139,10 @@
       var mainItem;
       for (var i = 0, m = mainItems.length; i < m; ++i) {
         mainItem = mainItems[i];
+
+        if (! mainItem.match(/\.js$/)) {
+          continue;
+        }
 
         mainItem = mainItem.replace(/\.js$/, '');
 

@@ -18,6 +18,7 @@ bower install --save-dev bower-requirejs-auto
 Add `bower-requirejs-auto/index.js` to your page, and specify options via the following attributes on its `<script>` tag:
 * `data-then`: (*required*) a main module to load after automatic configuration is complete, like RequireJS's `data-main`.
 * `data-base`: (*optional, default*: `''` ) a relative path to your "base" directory containing `bower.json` and `bower_components`.
+* `data-bower-path`: (*optional, default*: `'bower_components'`) the path of your `bower_components` directory, relative to your "base" directory.
 
 See [example](example). In summary:
 
